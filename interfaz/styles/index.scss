@@ -1,0 +1,213 @@
+@use '@material/theme' with (
+  $primary:  #558B2F,
+  $secondary: #D84315,
+  $background: #efebe9,
+);
+@use '@material/button/mdc-button';
+@use '@material/button';
+@use '@material/drawer';
+@use '@material/list';
+@use '@material/tab-bar/mdc-tab-bar';
+@use '@material/tab-scroller/mdc-tab-scroller';
+@use '@material/tab-indicator/mdc-tab-indicator';
+@use '@material/tab/mdc-tab';
+@use '@material/icon-button';
+@use '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/floating-label/mdc-floating-label';
+@use '@material/fab';
+@use '@material/shape';
+@use '@material/line-ripple/mdc-line-ripple';
+@use '@material/notched-outline/mdc-notched-outline';
+@use '@material/textfield';
+@use '@material/card';
+@use '@material/list/mdc-list';
+@use '@material/menu-surface/mdc-menu-surface';
+@use '@material/menu/mdc-menu';
+@use '@material/select/styles';
+
+@include fab.core-styles;
+@include card.core-styles;
+@include textfield.core-styles;
+
+//LISTO
+html {
+  scroll-behavior: smooth;
+}
+//LISTO
+body {
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0px auto;
+  background-color: #efebe9;
+}
+//LISTO
+.app-bar {
+  position: absolute;
+}
+//LISTO
+.mdc-top-app-bar {
+  z-index: 7;
+  @include icon-button.core-styles;
+}
+//LISTO
+.mdc-top-app-bar__title{
+  float:right;
+  text-align: left;
+  font-size: 220%;
+  color: white;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  width: auto;
+}
+//TODAS SECTIONS
+section {
+  text-align: center;
+}
+//TODOS LOS CONTENTS
+.content {
+  margin: 8rem auto;
+  padding-bottom: 20rem;
+  text-align: center;
+}
+//LISTO
+.sample-content--hidden {
+  display: none;
+}
+//ARREGLA FORMATO DE TODOS LOS TITULOS
+.titulos{
+  width: 100%;
+  text-align: center;
+}
+
+#idImagenLogo {
+  height: 50px;
+}
+
+//COLOR MAS CLARITO DEL TAB
+.mdc-tab {
+    background-color: #85bb5c;  
+}
+//LETRA NEGRA DEL TAB
+.mdc-tab__content .mdc-tab__text-label {
+    color: black;
+}
+//TEXTFIELD NOMBRE FRUTA Y NOMBRE VERDURA
+.mdc-text-field {
+    margin: 1rem auto;
+    width: 35%;
+}
+
+#idBtnAgregarFruta{
+  background-color: #D84315;
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  margin-left: 3%;
+}
+
+#idBtnAgregarVerdura{
+  background-color: #D84315;
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  margin-left: 3%;
+}
+
+#idBtnBorrar{
+  background-color: #D84315;
+  max-height: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  margin-left: 3%;
+}
+
+#idNombreFrutaAdd{
+  background-color: #efebe9;
+}
+
+#idNombreVerduraAdd{
+  background-color: #efebe9;
+}
+
+//ALINEA LISTAS
+.mdc-list{
+  display: inline-table;
+  width: auto;
+}
+
+#idListaCompras{
+  width: auto;
+}
+
+.mdc-image-list__image-aspect-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.claseBtnResta{
+  margin-right: auto;
+}
+
+.claseBtnSuma{
+  margin-left: auto;
+}
+
+.mdc-button--raised{
+  height: 20px;
+}
+
+.mdc-button--raised:not(:disabled){
+  background-color: #ff7543;
+}
+.mdc-tab-indicator .mdc-tab-indicator__content--underline{
+  border-color: #D84315;
+}
+
+@media only screen and (max-width: 600px){
+  .titulos{
+    width: 100%;
+    text-align: center;
+  }
+
+  .material-icons {
+    font-size: 18px;
+  }
+
+  #idBtnBorrar{
+    background-color: #D84315;
+    max-height: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  #idBtnAgregarFruta{
+    background-color: #D84315;
+    max-height: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  #idBtnAgregarVerdura{
+    background-color: #D84315;
+    max-height: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  #idImagenLogo {
+    height: 40px;
+    padding-left: 4px;
+  }
+  .mdc-top-app-bar__title{
+    font-size: 180%;
+  }
+
+}

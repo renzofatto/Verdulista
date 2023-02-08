@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="bundle.css">
+  <link rel="shortcut icon" href="img/logo.ico" alt = "Logo Verdulista"/>
+  <title lang="es">Verdulista</title>
+  <style>
+    body {
+      background-image: url("img/fondito.png");
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: repeat-y, repeat-x;
+    }
+  </style>
+</head>
+<body >
+  <!--CABEZAL VERDULISTA-->
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <div class="logo">
+          <img src="img/Logo.ico" id="idImagenLogo"></img>
+        </div>
+        <span class="mdc-top-app-bar__title" lang="es">VERDULISTA</span>
+      </section>
+    </div>
+    <!--TAB SCROLLER-->
+    <div class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">        
+            <!--TAB LISTA = 0-->
+            <button class="mdc-tab mdc-tab--active sample-content-tab" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label" lang="es">Lista</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                <span
+                  class="mdc-tab-indicator__content mdc-tab-indicator__content--underline sample-content-tab-indicator"></span>
+                </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <!--TAB FRUTAS = 1-->
+            <button class="mdc-tab sample-content-tab" role="tab" aria-selected="false" tabindex="1">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label" lang="es">Frutas</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+            <!--TAB VERDURAS = 2-->
+            <button class="mdc-tab sample-content-tab" role="tab" aria-selected="false" tabindex="2">
+              <span class="mdc-tab__content">
+                <span class="mdc-tab__text-label" lang="es">Verduras</span>
+              </span>
+              <span class="mdc-tab-indicator">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <!--SECTION LISTA-->
+    <section class="content">
+      <h1 class="titulo" id="idTituloCompras" lang="es">Lista de Compras</h1>
+      <ul class="claseListaCompras" id="idListaCompras">
+      </ul>
+      <!--BOTON DELETE btnBorrar-->
+      <button class="mdc-button mdc-button--raised" id="idBtnBorrar">
+        <span class="mdc-fab__icon material-icons">delete</span>
+      </button>
+    </section>
+    <!--SECTION FRUTAS-->
+    <section class="content sample-content--hidden">
+      <h1 class="titulos" id="idTituloFrutas" lang="es">Lista de Frutas</h1>
+      <!--LABEL TITULO-->
+      <div class="formulario">
+        <label class="mdc-text-field mdc-text-field--outlined" id="idNombreFrutaAdd">
+          <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+              <span class="mdc-floating-label" lang="es">Nombre fruta</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+          </span>
+          <input type="text" class="mdc-text-field__input" aria-labelledby="title">
+        </label>
+        <!--BOTON ADD btnAgregarFruta-->
+        <button class="mdc-button mdc-button--raised" id="idBtnAgregarFruta">
+          <span class="mdc-fab__icon material-icons">add</span>
+        </button>
+        <!--LIST idListaFrutas-->
+        <div id="root"></div>
+        <ul class="mdc-list" id="idListaFruta">
+          <li class="mdc-list-item" tabindex="0">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text"></span>
+          </li>
+        </ul>
+    </section>
+    <!--SECTION VERDURAS-->
+    <section class="content sample-content--hidden" id="idVerduras">
+      <h1 class="titulo" id="idTituloVerduras" lang="es">Lista de Verduras</h1>
+      <!--LABEL TITULO-->
+      <div class="formulario" id="idFormularioVerdura">
+        <label class="mdc-text-field mdc-text-field--outlined" id="idNombreVerduraAdd">
+          <span class="mdc-notched-outline">
+            <span class="mdc-notched-outline__leading"></span>
+            <span class="mdc-notched-outline__notch">
+              <span class="mdc-floating-label" lang="es">Nombre verdura</span>
+            </span>
+            <span class="mdc-notched-outline__trailing"></span>
+          </span>
+          <input type="text" class="mdc-text-field__input" aria-labelledby="title">
+        </label>
+        <!--BOTON ADD btnAgregarVerdura-->
+        <button class="mdc-button mdc-button--raised" id="idBtnAgregarVerdura">
+          <span class="mdc-fab__icon material-icons">add</span>
+        </button>
+        <!--LIST idListaVerduras-->
+        <div id="root"></div>
+        <div id="idDivG">
+        </div>
+        <ul class="mdc-list" id="idListaVerduras">
+          <li class="mdc-list-item" tabindex="0">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text"></span>
+          </li>
+        </ul>
+    </section>
+  </main>
+</body>
+<script src="bundle.js" async></script>
+
+</html>
